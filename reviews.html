@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/app/scss/style.css">
+    <title>Dash Test | Review Created</title>
+</head>
+<body>
+    <header class="header">
+        <nav class=" container flex flex-jc-sb flex-ai-c">
+            <a href="/" class="header__logo">
+                <img src="images/ic_logo.svg" alt="Area Finder">
+            </a>
+           <div class="header__box flex flex-jc-sb flex-ai-c">
+                <p class="header__welcome">
+                    Welcome!
+                </p>
+               
+               <a href="/profile" class="header__dp">
+                   <img src="images/profile pic.svg" alt="Profile">
+               </a>
+           </div>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <ul class="sidebar__menu">
+            <li>
+                <a href="/dashboard" class="icon sidebar__link">
+                    <span class="sidebar__icon sidebar__iconDashboard"></span>
+                    <span class="sidebar__text">Dashboard</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/areas" class="icon sidebar__link">
+                    <span class="sidebar__icon sidebar__iconAreas"></span>
+                    <span class="sidebar__text">Areas</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/reviews.html" class="icon sidebar__link active">
+                    <span class="sidebar__icon sidebar__iconReviews"></span>
+                    <span class="sidebar__text">Reviews</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/amenities" class="icon sidebar__link">
+                    <span class="sidebar__icon sidebar__iconAmenities"></span>
+                    <span class="sidebar__text">Amenities</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/settings" class="icon sidebar__link">
+                    <span class="sidebar__icon sidebar__iconSettings"></span>
+                    <span class="sidebar__text">Settings</span>
+                </a>
+            </li>
+            
+        </ul>
+    </aside>
+    
+    <section class="reviews">
+        <div class="reviews__header">
+            <h3>All Reviews Created</h3>
+            <div class="reviews__box">
+                <a href="/CreateReview" class="button">Create Review</a>
+                <div class="reviews__search">
+                    <input 
+                        type="text" 
+                        class="reviews__searchBar" 
+                        id="searchInput" 
+                        placeholder="Search"
+                    >
+                    <img 
+                        src="images/search.svg" 
+                        alt="search" 
+                        class="reviews__searchIcon"
+                    >
+                </div>
+                <a href="/Search" class="button2">Search</a>
+            </div>
+            
+        </div>
+
+        <div class="reviews__table">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="date">Date Created</th>
+                        <th class="areas">Areas</th>
+                        <th class="name">Name</th>
+                        <th class="review">Review</th>
+                        <th class="view">Views</th>
+                        <th class="status">Status</th>
+                        <th class="reviews__blank"></th>
+                    </tr>
+                </thead>
+                <tbody id="reviewsTableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="reviews__footer">
+            <a href="/Previous" class="button3"><img src="/images/arrow-left.svg" alt="Previous" class="">Previous</a>
+            <div class="reviews__pagination">
+                <a href="#" class="reviews__paginationLink1">1</a>
+                <a href="#" class="reviews__paginationLink">2</a>
+                <a href="#" class="reviews__paginationLink">3</a>
+                <a href="#" class="reviews__paginationLink">...</a>
+                <a href="#" class="reviews__paginationLink">8</a>
+                <a href="#" class="reviews__paginationLink">9</a>
+                <a href="#" class="reviews__paginationLink">10</a>
+            </div>
+            <a href="/Next" class="button3">Next<img src="/images/arrow-right.svg" alt="Next" class=""></a>
+        </div>
+    </section>
+
+    
+    <script src="/app/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+.sidebar {
+    position: fixed;
+    width: 200px;
+    height: 952px;
+    background-color: #F2F6FD;
+    z-index: 2;
+    top: 68px;
+
+    &__menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 40px;
+    }
+    
+    &__menu li {
+        
+        
+    }
+    
+    &__menu li a {
+        text-decoration: none;
+        color: #1E1E1E;
+        display: flex;
+        height: 48px;
+        line-height: 1;
+        padding: 16px 24px;
+        font-size: 16px;
+        font-weight: 500;
+        transition:  transform 0.3s ease; 
+    }
+    
+    &__menu li a:hover {
+        background-color: #0B153A;
+        color: #FBFAFC;
+        transform: scale(1.1); 
+    }
+
+    &__menu li a.active {
+        background-color: #0B153A;
+        color: #FBFAFC;
+    }
+    
+    &__icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-size: cover;
+    }
+
+    &__iconDashboard {
+        background-image: url("../../images/dash.svg");
+    }
+
+    &__link[href="/dashboard"]:hover &__iconDashboard {
+        background-image: url('../../images/dash2.svg');
+    }
+
+    &__iconAreas {
+        background-image: url("../../images/areas.svg");
+    }
+
+    &__link[href="/areas"]:hover &__iconAreas {
+        background-image: url('../../images/areas2.svg');
+    }
+
+    &__iconReviews {
+        background-image: url("../../images/reviews.svg");
+    }
+
+    &__link[href="/reviews.html"]:hover &__iconReviews {
+        background-image: url('../../images/reviews2.svg');
+    }
+
+    &__link[href="/reviews.html"].active &__iconReviews {
+        background-image: url('../../images/reviews2.svg');
+    }
+
+    &__iconAmenities {
+        background-image: url("../../images/amenities.svg");
+    }
+
+    &__link[href="/amenities"]:hover &__iconAmenities {
+        background-image: url('../../images/amenities2.svg');
+    }
+
+    &__iconSettings {
+        background-image: url("../../images/settings.svg");
+    }
+
+    &__link[href="/settings"]:hover &__iconSettings {
+        background-image: url('../../images/settings2.svg');
+    }
+
+
+}
+

@@ -1,0 +1,44 @@
+.header {
+    position: fixed;
+    height: 68px;
+    width: 100%;
+    z-index: 3;
+    top: 0px;
+    background-color: #F2F6FD;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include breakpoint-up(medium){
+        margin-bottom: 0;
+    }
+
+    nav {
+        margin-top: 0;
+        
+        @include breakpoint-up(medium){
+        
+        }
+    }
+
+    &__logo {
+        width: 92px;
+        height: 29px;
+    }
+
+    &__box {
+        gap: 13px;
+    }
+
+    &__welcome {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__btn {
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        font-size: $font-sm;
+    }
+}
