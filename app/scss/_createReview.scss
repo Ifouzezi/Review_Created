@@ -1,0 +1,78 @@
+.reviewForm {
+    position: relative;
+    top: 68px;
+    margin-top: 40px;
+    margin-left: 571px;
+
+    .button4 {
+        display: flex;
+        margin-bottom: 40px;
+        align-items: first baseline;
+        gap: 2px;
+    }
+
+    .button4:hover {
+        text-decoration: underline;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border-radius: 6px;
+        padding: 24px;
+        width: 498px;
+        height: 396px;
+        background-color: #ffff;
+    }
+
+    &__area {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        
+    }
+
+    .areaName {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    textarea, input, select {
+        border-radius: 6px;
+        background-color: #F3F7FE;
+        border: 1px solid #D4DCF1;
+        padding: 12px 16px;
+    }
+
+    input {
+        width: 450px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    textarea {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    select::placeholder,
+    textarea::placeholder,
+    input::placeholder  {
+        font-size: 16px;
+        font-weight: 400;
+        color: #101012;
+        opacity: 50%;
+    }
+
+    select {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}

@@ -260,5 +260,33 @@ function generateTableRows() {
     }
 }
 
-// Call the function to generate table rows when the page loads
 window.onload = generateTableRows;
+
+// Get the form element
+const reviewForm = document.getElementById('reviewForm');
+
+// Add event listener for form submission
+reviewForm.addEventListener('submit', function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Extract values from form fields
+    const areaName = document.getElementById('areaName').value;
+    const amenities = document.getElementById('amenities').value;
+    const description = document.getElementById('description').value;
+
+    // Log the values to the console
+    console.log("Area Name:", areaName);
+    console.log("Amenities:", amenities);
+    console.log("Description:", description);
+
+    // Simulate successful submission (you would replace this with actual form submission handling)
+    // For demonstration purposes, I'm using a setTimeout function to simulate an asynchronous action
+    setTimeout(function() {
+        // Redirect the user back to the review page
+        window.location.href = '/reviews.html';
+
+        // Show a popup or notification indicating that the review has been added
+        alert('Review added successfully!');
+    }, 1000); // Change the delay as needed (milliseconds)
+});

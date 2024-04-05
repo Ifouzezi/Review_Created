@@ -153,6 +153,44 @@ h3 {
   cursor: pointer;
 }
 
+.button4 {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  color: #344054;
+  opacity: 75%;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.5;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.button5 {
+  display: block;
+  width: 450px;
+  height: 51px;
+  border-radius: 4px;
+  background-color: #557FF2;
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 16px 24px;
+  line-height: 0.1;
+  cursor: pointer;
+  border: none;
+}
+.button5:hover {
+  background-color: #2952CC;
+  color: #ffffff;
+}
+.button5:active {
+  background-color: #061E66;
+  color: #ffffff;
+}
+
 @media (min-width: 40em) {
   .hide-for-mobile {
     display: none;
@@ -290,6 +328,9 @@ h3 {
   width: 80.5%;
   top: 68px;
   margin-bottom: 24px;
+  /* The Modal (background) */
+  /* Modal Content/Box */
+  /* The Close Button */
 }
 .reviews__header {
   display: flex;
@@ -399,4 +440,108 @@ h3 {
   border-radius: 20px;
   text-decoration: none;
   color: #667085;
+}
+.reviews .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.reviews .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+.reviews .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.reviews .close:hover,
+.reviews .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.reviewForm {
+  position: relative;
+  top: 68px;
+  margin-top: 40px;
+  margin-left: 571px;
+}
+.reviewForm .button4 {
+  display: flex;
+  margin-bottom: 40px;
+  align-items: first baseline;
+  gap: 2px;
+}
+.reviewForm .button4:hover {
+  text-decoration: underline;
+}
+.reviewForm__title {
+  margin-bottom: 16px;
+}
+.reviewForm__box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 6px;
+  padding: 24px;
+  width: 498px;
+  height: 396px;
+  background-color: white;
+}
+.reviewForm__area {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.reviewForm .areaName {
+  font-size: 16px;
+  font-weight: 400;
+}
+.reviewForm textarea, .reviewForm input, .reviewForm select {
+  border-radius: 6px;
+  background-color: #F3F7FE;
+  border: 1px solid #D4DCF1;
+  padding: 12px 16px;
+}
+.reviewForm input {
+  width: 450px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.reviewForm textarea {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+.reviewForm select::-moz-placeholder, .reviewForm textarea::-moz-placeholder, .reviewForm input::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #101012;
+  opacity: 50%;
+}
+.reviewForm select::placeholder,
+.reviewForm textarea::placeholder,
+.reviewForm input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #101012;
+  opacity: 50%;
+}
+.reviewForm select {
+  font-size: 14px;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */

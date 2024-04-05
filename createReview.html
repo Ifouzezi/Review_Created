@@ -66,70 +66,45 @@
             
         </ul>
     </aside>
-    
-    <section class="reviews">
-        <div class="reviews__header">
-            <h3>All Reviews Created</h3>
-            <div class="reviews__box">
-                <a href="/createReview.html" class="button">Create Review</a>
-                <div class="reviews__search">
-                    <input 
-                        type="text" 
-                        class="reviews__searchBar" 
-                        id="searchInput" 
-                        placeholder="Search"
-                    >
-                    <img 
-                        src="images/search.svg" 
-                        alt="search" 
-                        class="reviews__searchIcon"
-                    >
-                </div>
-                <a href="/Search" class="button2">Search</a>
+
+    <section class="reviewForm">
+        <a href="/reviews.html" class="button4"><img src="/images//trending_flat.svg" alt="Next" class="">Back</a>
+        <div class="reviewForm__header">
+            <h3 class="reviewForm__title">Create a new Review</h3>
+        </div>
+
+        <form action="/reviews.html" method="post" class="reviewForm__box" id="reviewForm">
+            <div class="reviewForm__area">
+                <label for="areaName" class="areaName">Name of Area</label>
+                <input 
+                    type="text" 
+                    id="areaName" 
+                    name="areaName" 
+                    placeholder="Input the name of the Area"
+                    required
+                >
+
             </div>
             
-        </div>
+            <select id="amenities" name="amenities">
+                <option value="selected">Select Amenities</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
 
-        <div class="reviews__table">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="date">Date Created</th>
-                        <th class="areas">Areas</th>
-                        <th class="name">Name</th>
-                        <th class="review">Review</th>
-                        <th class="view">Views</th>
-                        <th class="status">Status</th>
-                        <th class="reviews__blank"></th>
-                    </tr>
-                </thead>
-                <tbody id="reviewsTableBody">
-                </tbody>
-            </table>
-        </div>
-
-        <div class="reviews__footer">
-            <a href="/Previous" class="button3"><img src="/images/arrow-left.svg" alt="Previous" class="">Previous</a>
-            <div class="reviews__pagination">
-                <a href="#" class="reviews__paginationLink1">1</a>
-                <a href="#" class="reviews__paginationLink">2</a>
-                <a href="#" class="reviews__paginationLink">3</a>
-                <a href="#" class="reviews__paginationLink">...</a>
-                <a href="#" class="reviews__paginationLink">8</a>
-                <a href="#" class="reviews__paginationLink">9</a>
-                <a href="#" class="reviews__paginationLink">10</a>
-            </div>
-            <a href="/Next" class="button3">Next<img src="/images/arrow-right.svg" alt="Next" class=""></a>
-        </div>
+            <textarea 
+                id="description" 
+                name="description" 
+                placeholder="Write a review for this Area"
+                required
+            >
+            </textarea>
+            
+            <button class="button5" type="submit">Save</button>
+        </form>
     </section>
 
-    <!-- Modal Box -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="modalMessage">Review Created successfully!</p>
-        </div>
-    </div>
     
     <script src="/app/js/script.js"></script>
 </body>
