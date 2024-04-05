@@ -461,6 +461,7 @@ h3 {
   border: 0.5px solid #0F920F;
   background-color: #F2FDF2;
   border-radius: 6px;
+  box-shadow: 0px 16px 40px rgba(5, 66, 5, 0.08);
 }
 @keyframes fadeIn {
   0% {
