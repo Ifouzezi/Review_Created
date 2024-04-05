@@ -262,31 +262,21 @@ function generateTableRows() {
 
 window.onload = generateTableRows;
 
-// Get the form element
-const reviewForm = document.getElementById('reviewForm');
 
-// Add event listener for form submission
-reviewForm.addEventListener('submit', function(event) {
-    // Prevent the default form submission behavior
+function saveReview(event) {
     event.preventDefault();
 
-    // Extract values from form fields
-    const areaName = document.getElementById('areaName').value;
-    const amenities = document.getElementById('amenities').value;
-    const description = document.getElementById('description').value;
+    var areaName = document.getElementById('areaName').value;
+    var amenities = document.getElementById('amenities').value;
+    var description = document.getElementById('description').value;
 
-    // Log the values to the console
-    console.log("Area Name:", areaName);
-    console.log("Amenities:", amenities);
-    console.log("Description:", description);
+    console.log("Area Name: " + areaName);
+    console.log("Amenities: " + amenities);
+    console.log("Description: " + description);
 
-    // Simulate successful submission (you would replace this with actual form submission handling)
-    // For demonstration purposes, I'm using a setTimeout function to simulate an asynchronous action
-    setTimeout(function() {
-        // Redirect the user back to the review page
-        window.location.href = '/reviews.html';
+    window.location.href = "/reviewsSuccess.html?areaName=" + encodeURIComponent(areaName) + "&amenities=" + encodeURIComponent(amenities) + "&description=" + encodeURIComponent(description);
+}
 
-        // Show a popup or notification indicating that the review has been added
-        alert('Review added successfully!');
-    }, 1000); // Change the delay as needed (milliseconds)
-});
+document.getElementById('reviewForm').addEventListener('submit', saveReview);
+
+

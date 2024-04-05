@@ -136,42 +136,49 @@
         color: #667085;
     }
 
-    /* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+    &__message {
+        top: -92%;
+        left: 35.6%;
+        width: 339px;
+        height: 50px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 0.9;
+        position: relative;
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: center;
+        pointer-events: none;
+        
+    }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
+    &__success{
+        font-size: 20px;
+        color: #0F920F;
+        position: absolute;
+        animation: fadeIn 2s ease forwards, 
+                   fadeOut 2s ease 3s forwards; 
+        padding: 16px;
+        border: 0.5px solid #0F920F;
+        background-color: #F2FDF2;
+        border-radius: 6px;
+    }
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1; 
+        }
+    }
+    
+    @keyframes fadeOut {
+        50% {
+            opacity: 1; 
+        }
+        100% {
+            opacity: 0; 
+        }
+    }
 }
